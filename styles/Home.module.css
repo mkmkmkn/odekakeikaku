@@ -1,0 +1,10 @@
+.main {
+  width: 100%;
+}
+.mv {
+  margin: 0 auto;
+  display: flex;
+}
+.vercelLogo {
+  margin: 0 auto;
+}
