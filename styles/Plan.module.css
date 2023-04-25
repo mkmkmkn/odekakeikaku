@@ -1,0 +1,8 @@
+.main {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+}
+.vercelLogo {
+  margin: 0 auto;
+}

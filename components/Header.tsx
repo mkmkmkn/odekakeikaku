@@ -14,13 +14,10 @@ type Props = {
 const Header: React.FC<Props> = (props) => {
   return (
     <header className={styles.header}>
-      <Link href="/" >
-        TOP
-      </Link>
-      <Link href="/about" >
-        ABOUT
-      </Link>
       <h2>{props.title}</h2>
+      <Link href="/profile" >
+        Profile
+      </Link>
     </header>
   )
 }
