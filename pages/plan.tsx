@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSession, signIn, signOut } from 'next-auth/react';
 import { NextPage } from 'next';
 import Head from 'next/head'
 import { Header } from '@/components/Header'
@@ -7,18 +6,10 @@ import { Sidebar } from '@/components/Sidebar'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Plan.module.css'
+import { Login } from '@/components/Login.module';
+import { Logout } from '@/components/Logout.module';
 
 const Plan: NextPage = () => {
-  // sessionの値のイメージ
-  // {
-  //  "user":{
-  //    "name":"mk",
-  //    "email":"XXXX@email.com",
-  //    "image":"https://lh3.googleusercontent.com/a/ABCdef_GHijKlMn=s99-c"
-  //  },
-  //  "expires":"2023-04-25T12:30:59.000Z"
-  // }
-  const { data: session } = useSession();
 
   return (
     <>
@@ -28,13 +19,12 @@ const Plan: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {
-        // セッションがある場合アプリを表示
-        session && (
+      
+      {/* ログインしている場合 */}
           <>
           <Header title="おでかけいかく" />
           <main className={styles.main}>
-            <Sidebar title="sidebarのタイトルです" />
+            <Sidebar title="sidebarタイトル" />
             <div className={styles.contents}>
                   <Image
                     src="/vercel.svg"
@@ -44,24 +34,22 @@ const Plan: NextPage = () => {
                     height={24}
                     priority
                   />
+                  <div className={styles.card}>計画1</div>
+                  <div className={styles.card}>計画2</div>
+                  <div className={styles.card}>+</div>
             </div>
+            <Logout />
           </main>
           </>
-        )
-      }
-      {
-        // セッションがない場合、ログインを表示
-        // ログインボタンを押すと、ログインページに遷移する
-        !session && (
+          
+      {/* ログインしていない場合 */}
           <div>
             <p>ログインしていません</p>
-            <button onClick={() => signIn()}>ログイン</button>
+            <Login />
             <Link href="/" >
               TOPへ戻る
             </Link>
           </div>
-        )
-      }
     </>
   );
 };
