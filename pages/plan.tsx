@@ -1,8 +1,8 @@
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head'
-import { Header } from '@/components/Header'
-import { Sidebar } from '@/components/Sidebar'
+import { Header } from '@/components/Header.module'
+import { Sidebar } from '@/components/Sidebar.module'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Plan.module.css'

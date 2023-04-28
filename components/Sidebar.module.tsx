@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './Sidebar.module.css'
-import { Logout } from './Logout.module';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +20,9 @@ export function Sidebar(props: Props) {
         <li>計画</li>
         <li>設定</li>
       </ul>
-      <Logout />
+
+      <div>aaaaaaaaaaaa
+      </div>
     </aside>
   )
 }

@@ -3,10 +3,15 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import Container from '@/components/IfLogin.module'
+import { Auth } from "@supabase/auth-ui-react"
+import supabaseClient from '@/utils/supabaseClient'
+import signIn from '../utils/signIn'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() { //pages配下なのでdefaultが必要
+  
   return (
     <>
       <Head>
@@ -19,17 +24,25 @@ export default function Home() { //pages配下なのでdefaultが必要
         <h1>おでかけいかく</h1>
         <nav>
           <ul>
-            <li></li>
             <li>
-              <Link href="/plan">
+              <Auth.UserContextProvider supabaseClient={supabaseClient}>
+                <Container supabaseClient={supabaseClient}>
+                  <button onClick={() => signIn(supabaseClient)}>ロッグインン</button>
+                </Container>
+              </Auth.UserContextProvider>
+            </li>
+            <li>
+              {/* <Link href="/plan">
                 ログイン
-              </Link>
+              </Link> */}
             </li>
           </ul>
         </nav>
       </header>
       <main>
-        <section></section>
+        <section>
+          
+        </section>
       </main>
       <footer></footer>
     </>
