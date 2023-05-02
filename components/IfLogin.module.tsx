@@ -1,6 +1,6 @@
 import { Auth } from "@supabase/auth-ui-react";
 
-export default function Container(props) {
+export default function Container(props:any) {
     const { user } = Auth.useUser();
   
     if (user)

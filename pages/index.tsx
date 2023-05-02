@@ -29,6 +29,8 @@ export default function Home() { //pages配下なのでdefaultが必要
                 <Container supabaseClient={supabaseClient}>
                   <button onClick={() => signIn(supabaseClient)}>ロッグインン</button>
                 </Container>
+                {/* <NotLogin supabaseClient={supabaseClient}>
+                </NotLogin> */}
               </Auth.UserContextProvider>
             </li>
             <li>

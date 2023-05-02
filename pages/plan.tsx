@@ -6,8 +6,6 @@ import { Sidebar } from '@/components/Sidebar.module'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Plan.module.css'
-import { Login } from '@/components/Login.module';
-import { Logout } from '@/components/Logout.module';
 
 const Plan: NextPage = () => {
 
@@ -19,7 +17,6 @@ const Plan: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
       {/* ログインしている場合 */}
           <>
           <Header title="おでかけいかく" />
@@ -38,14 +35,12 @@ const Plan: NextPage = () => {
                   <div className={styles.card}>計画2</div>
                   <div className={styles.card}>+</div>
             </div>
-            <Logout />
           </main>
           </>
           
       {/* ログインしていない場合 */}
           <div>
             <p>ログインしていません</p>
-            <Login />
             <Link href="/" >
               TOPへ戻る
             </Link>
