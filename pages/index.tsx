@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import Container from '@/components/IfLogin.module'
+import { Container } from '@/components/IfLogin.module'
 import { Auth } from "@supabase/auth-ui-react"
 import supabaseClient from '@/utils/supabaseClient'
 import signIn from '../utils/signIn'
@@ -29,8 +29,6 @@ export default function Home() { //pages配下なのでdefaultが必要
                 <Container supabaseClient={supabaseClient}>
                   <button onClick={() => signIn(supabaseClient)}>ロッグインン</button>
                 </Container>
-                {/* <NotLogin supabaseClient={supabaseClient}>
-                </NotLogin> */}
               </Auth.UserContextProvider>
             </li>
             <li>
@@ -43,7 +41,6 @@ export default function Home() { //pages配下なのでdefaultが必要
       </header>
       <main>
         <section>
-          
         </section>
       </main>
       <footer></footer>
