@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Container } from '@/components/IfLogin.module'
+import { AuthPlanApp } from '@/components/AuthPlanApp.module'
 import { Auth } from "@supabase/auth-ui-react"
 import supabaseClient from '@/utils/supabaseClient'
 import signIn from '../utils/signIn'
@@ -26,9 +26,9 @@ export default function Home() { //pages配下なのでdefaultが必要
           <ul>
             <li>
               <Auth.UserContextProvider supabaseClient={supabaseClient}>
-                <Container supabaseClient={supabaseClient}>
-                  <button onClick={() => signIn(supabaseClient)}>ロッグインン</button>
-                </Container>
+                <AuthPlanApp supabaseClient={supabaseClient}>
+                  <button onClick={() => signIn(supabaseClient)}>Googleでログイン</button>
+                </AuthPlanApp>
               </Auth.UserContextProvider>
             </li>
             <li>
