@@ -25,6 +25,7 @@ export default function Home() { //pages配下なのでdefaultが必要
         <nav>
           <ul>
             <li>
+              {/* Context を使用するには Provider コンポーネントで囲む必要があります */}
               <Auth.UserContextProvider supabaseClient={supabaseClient}>
                 <AuthPlanApp supabaseClient={supabaseClient}>
                   <button onClick={() => signIn(supabaseClient)}>Googleでログイン</button>

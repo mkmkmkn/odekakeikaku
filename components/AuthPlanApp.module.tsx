@@ -10,7 +10,7 @@ function AuthPlanApp(props:any) {
 
   useEffect(() => {
         if (user) router.replace("/plan");
-      }, [user]);
+      });
 
 
 
@@ -26,7 +26,7 @@ function AuthPlanApp(props:any) {
   return props.children;
 }
 
-//リダイレクトで一瞬画面が移るのを防ぐ（getServerSideProps）
+//リダイレクトで一瞬画面が移るのを防ぐ（getServerSideProps）バックエンドステート
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   const supabase = createServerSupabaseClient(ctx);
   const {
