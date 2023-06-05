@@ -5,6 +5,7 @@ import { Auth } from "@supabase/auth-ui-react"
 import { Todos } from '@/components/Todos.module'
 import supabaseClient from '@/utils/supabaseClient'
 import Link from 'next/link'
+import styles from '@/styles/Plan.module.css'
 
 const Plan: NextPage = () => {
     return (

@@ -1,0 +1,25 @@
+.main {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+}
+.vercelLogo {
+  margin: 0 auto;
+}
+.contents {
+  width: calc(100vw - 240px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ff99aa;
+}
+.todos {
+  
+}
+.card {
+
+}
+.dustBox {
+  cursor: pointer;
+}
