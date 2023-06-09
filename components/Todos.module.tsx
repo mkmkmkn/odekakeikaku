@@ -6,15 +6,17 @@ import styles from './Todos.module.css'
 import supabaseClient from '@/utils/supabaseClient'
 import { useState, useEffect } from "react"
 
+type Todo = {
+  id: number,
+  created_at: any,
+  task: string,
+  order: number
+};
+
 type Props = {
-  todos: [
-    id: number,
-    created_at: any,
-    task: string,
-    order: number,
-    children: any
-  ]
-}
+  todos: Todo[],
+  children: string
+};
 
 function Todos(props:Props) {
   const { user } = Auth.useUser();
@@ -53,10 +55,12 @@ function Todos(props:Props) {
     } = await supabaseClient.from('todos').select('*');
     setTodos(todos);
 
+    //テキストの入力欄を空にする
     setTask("");
   };
 
-  const deleteTask = async(id: number) => {
+  //todosのデータ削除
+  const deleteTask = async (id: number) => {
     await supabaseClient.from('todos').delete().eq("id", id);
   }
 
