@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { AuthPlanApp } from '@/components/AuthPlanApp.module'
+import { AuthPlanApp } from '@/utils/AuthPlanApp.module'
 import { Auth } from "@supabase/auth-ui-react"
 import supabaseClient from '@/utils/supabaseClient'
 import signIn from '../utils/signIn'
@@ -20,7 +20,7 @@ export default function Home() { //pages配下なのでdefaultが必要
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
+      <header className={styles.header}>
         <h1>おでかけいかく</h1>
         <nav>
           <ul>

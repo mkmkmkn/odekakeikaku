@@ -1,10 +1,29 @@
-.main {
-  width: 100%;
-}
-.mv {
-  margin: 0 auto;
+.header {
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  background: #f0e4d8;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.vercelLogo {
-  margin: 0 auto;
+.header h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: 'Kaisei Opti', serif;
+}
+.header button {
+  margin-top: 32px;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: 3px solid #666;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #f3edf3;
+  transition: all .5s ease;
+}
+
+.header button:hover {
+  background-color: #F0D8F0;
 }

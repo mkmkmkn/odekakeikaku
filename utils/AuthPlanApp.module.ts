@@ -9,10 +9,8 @@ function AuthPlanApp(props:any) {
   const router = useRouter();
 
   useEffect(() => {
-        if (user) router.replace("/plan");
-      });
-
-
+    if (user) router.replace("/plan");
+  });
 
   // if (user)
   //   return (

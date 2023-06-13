@@ -7,4 +7,33 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #eee;
+}
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: 'Kaisei Opti', serif;
+}
+.header p {
+  padding: 0 1rem 0 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #666;
+  border-radius: 100px;
+  transition: all .3s ease;
+}
+.header p span {
+  margin-right: 0.125rem;
+  font-size: 1.75rem;
+  font-family: 'Material Symbols Outlined';
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+.header p:hover {
+  background-color: #ddd;
 }

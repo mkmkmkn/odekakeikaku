@@ -2,7 +2,10 @@ import { createClient } from "@supabase/supabase-js";
 
 export type Database = {
     id: string,
+    title: string,
     task: string,
+    time: string,
+    vehicle: string,
     created_at: string,
     order: number
 };

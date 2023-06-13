@@ -2,10 +2,10 @@ import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head'
 import { Auth } from "@supabase/auth-ui-react"
-import { ProfileContents } from '@/components/ProfileContents.module'
+import { SettingsContents } from '@/components/SettingsContents.module'
 import supabaseClient from '@/utils/supabaseClient'
 import Link from 'next/link'
-import styles from '@/styles/Plan.module.css'
+import styles from '@/styles/Settings.module.css'
 
 const Plan: NextPage = () => {
     return (
@@ -17,14 +17,14 @@ const Plan: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <Auth.UserContextProvider supabaseClient={supabaseClient}>
-          <ProfileContents supabaseClient={supabaseClient}>
+          <SettingsContents supabaseClient={supabaseClient}>
             <main className={styles.main}>
                 <p>ログインしていません</p>
                 <Link href="/" >
                     TOPへ戻る
                 </Link>
             </main>
-          </ProfileContents>
+          </SettingsContents>
         </Auth.UserContextProvider>
       </>
     )
