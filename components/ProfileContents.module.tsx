@@ -16,7 +16,7 @@ type Todo = {
 
 type Props = {
   todos: Todo[],
-  children: string
+  children: any
 };
 
 function ProfileContents(props:Props) {

@@ -3,10 +3,6 @@ import styles from './Sidebar.module.css'
 import { Auth } from "@supabase/auth-ui-react"
 import Link from 'next/link';
 
-type Props = {
-  title?: string;
-}
-
 export function Sidebar(props: any) {
   const { user } = Auth.useUser();
 

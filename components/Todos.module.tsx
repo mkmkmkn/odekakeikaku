@@ -1,10 +1,9 @@
 import { Auth } from "@supabase/auth-ui-react"
 import { Header } from '@/components/Header.module'
 import { Sidebar } from '@/components/Sidebar.module'
-import Image from 'next/image'
 import styles from './Todos.module.css'
 import supabaseClient from '@/utils/supabaseClient'
-import { useState, useEffect } from "react"
+import { useState, useEffect, ReactNode } from "react"
 
 type Todo = {
   id: number,
@@ -17,11 +16,13 @@ type Todo = {
 };
 
 type Props = {
-  todos: Todo[],
-  children: string
+  // todos: Todo[],
+  // children: ReactNode,
+  children: any,
+  supabaseClient: any
 };
 
-function Todos(props:Props) {
+const Todos:React.FC<Props> = (props:Props) => {
   const { user } = Auth.useUser();
   const [todos, setTodos] = useState<any>([]);
   const [task, setTask] = useState<string>("");

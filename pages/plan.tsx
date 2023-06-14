@@ -7,6 +7,8 @@ import supabaseClient from '@/utils/supabaseClient'
 import Link from 'next/link'
 import styles from '@/styles/Plan.module.css'
 
+type Props = {}
+
 const Plan: NextPage = () => {
     return (
       <>
