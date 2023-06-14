@@ -15,11 +15,12 @@ type Todo = {
 };
 
 type Props = {
-  todos: Todo[],
-  children: any
+  // todos: Todo[],
+  children: any,
+  supabaseClient: any
 };
 
-function ProfileContents(props:Props) {
+const ProfileContents:React.FC<Props> = (props:Props) => {
   const { user } = Auth.useUser();
 
   if (user)
