@@ -29,7 +29,7 @@ const Todos:React.FC<Props> = (props:Props) => {
   const [title, setTitle] = useState<string>("");
   const [time, setTime] = useState<string>("");
   const [vehicle, setVehicle] = useState<string>("");
-
+  
   //todosにあるデータの取得 useEffectでマウント時に発火
   useEffect(() => {
     const getTodos = async () => {
@@ -97,7 +97,12 @@ const Todos:React.FC<Props> = (props:Props) => {
                 {todos.map((todo:any) => (
                   <li className={styles.card} key={todo.id}>
                     <h3>{todo.title}</h3>
-                    <p>{todo.vehicle}</p>
+                    <p>
+                      <span className={styles.symbolVehicle}>
+                        {todo.vehicle.split("&")[0]}
+                      </span>
+                      {todo.vehicle.split("&")[1]}
+                    </p>
                     <p><span className={styles.symbolTime}>Schedule</span>{todo.time}</p>
                     <p>{todo.task}</p>
                     <span className={styles.dustBox} onClick={() => handleDelete(todo.id)}>Delete</span>
@@ -107,24 +112,24 @@ const Todos:React.FC<Props> = (props:Props) => {
             </div>
             <form className={styles.todosForm} onSubmit={(e) => handleSubmit(e)}>
               <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} placeholder="タイトル" />
-              <input type="text" onChange={(e) => setVehicle(e.target.value)} value={vehicle} placeholder="移動手段" />
-              {/* <select name="">
+              {/* <input type="text" onChange={(e) => setVehicle(e.target.value)} value={vehicle} placeholder="移動手段" /> */}
+              <select onChange={(e) => setVehicle(e.target.value)} name="selectIcon">
                 <option hidden>アイコン</option>
                 <option value="">なし</option>
-                <option value="Flight">飛行機</option>
-                <option value="Train">電車</option>
-                <option value="Directions Boat">船</option>
-                <option value="Directions Bus">バス</option>
-                <option value="Directions Car">車</option>
-                <option value="Local Taxi">タクシー</option>
-                <option value="Two Wheeler">バイク</option>
-                <option value="Pedal Bike">自転車</option>
-                <option value="Directions Walk">徒歩</option>
-                <option value="Distance">場所</option>
-                <option value="Restaurant">食事</option>
-                <option value="Apartment">ホテル</option>
-                <option value="Surfing">アクティビティ</option>
-              </select> */}
+                <option value="Flight&飛行機">飛行機</option>
+                <option value="Train&電車">電車</option>
+                <option value="Directions_Boat&船">船</option>
+                <option value="Directions_Bus&バス">バス</option>
+                <option value="Directions_Car&車">車</option>
+                <option value="Local_Taxi&タクシー">タクシー</option>
+                <option value="Two Wheeler&バイク">バイク</option>
+                <option value="Pedal_Bike&自転車">自転車</option>
+                <option value="Directions_Walk&徒歩">徒歩</option>
+                <option value="Distance&場所">場所</option>
+                <option value="Restaurant&食事">食事</option>
+                <option value="Apartment&ホテル">ホテル</option>
+                <option value="Surfing&アクティビティ">アクティビティ</option>
+              </select>
               <input type="text" onChange={(e) => setTime(e.target.value)} value={time} placeholder="時間" />
               <textarea onChange={(e) => setTask(e.target.value)} value={task} placeholder="内容"></textarea>
               <button className={styles.addButton}>追加</button>
