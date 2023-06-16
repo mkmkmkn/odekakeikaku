@@ -23,7 +23,7 @@ export function Sidebar(props: any) {
           </Link>
         </ul>
         <button className={styles.logoutButton} onClick={() => props.supabaseClient.auth.signOut()}>
-          <span className={styles.symbol}>Logout</span><span>ログアウト</span>
+          <span className={styles.symbol}>Logout</span><span className={styles.logoutButtonText} >ログアウト</span>
         </button>
       </aside>
     )

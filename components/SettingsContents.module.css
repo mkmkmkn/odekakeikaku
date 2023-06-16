@@ -42,3 +42,23 @@
   'GRAD' 0,
   'opsz' 48;
 }
+
+/* レスポンシブ */
+@media screen and (max-width:600px) {
+  .mainRow{
+    flex-direction: column-reverse;
+  }
+  .main{
+    width: 100%;
+    height: calc(100vh - 128px);
+  }
+  .contents h2 {
+    margin-top: 1rem;
+    font-size: 1.75rem;
+  }
+  .contents h2::before {
+    top: -0.375rem;
+    left: -65%;
+    font-size: 2.25rem;
+  }
+}

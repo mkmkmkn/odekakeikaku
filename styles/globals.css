@@ -106,3 +106,76 @@ a {
     color-scheme: dark;
   }
 }
+
+/* react-datepickerのスタイル設定 */
+.dateIconWrapper{
+  width: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.dateIconWrapper > div{
+  width: 48%;
+}
+.dateIconWrapper select{
+  width: 48%;
+}
+.react-datepicker__input-container input {
+  width: 100%;
+}
+.dateIconWrapper > .react-datepicker__tab-loop {
+  width: 0;
+}
+.react-datepicker__tab-loop .react-datepicker {
+  border: 2px solid #666;
+}
+.react-datepicker__tab-loop .react-datepicker__header {
+  background-color: #f6f6f6;
+  border-bottom: 2px solid #666;
+}
+.react-datepicker__tab-loop .react-datepicker__triangle::before {
+  height: 1px!important;
+  bottom: -3px!important;
+  border-top-color: #666!important;
+}
+.react-datepicker__tab-loop .react-datepicker__day--selected {
+  background-color: #F0D8E4;
+  color: #111;
+}
+.react-datepicker__tab-loop .react-datepicker__day--selected:hover {
+  background-color: #e0b8c4;
+}
+.react-datepicker__tab-loop .react-datepicker__navigation-icon::before {
+  top: 12px;
+}
+.react-datepicker__tab-loop .react-datepicker-time__caption{
+  font-size: 1rem;
+}
+.react-datepicker__tab-loop .react-datepicker-time__input{
+  margin-bottom: 5px;
+  margin-left: 1px!important;
+}
+.react-datepicker__tab-loop .react-datepicker__input-time-container {
+  margin: 5px auto 10px auto;
+  text-align: center;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:600px) {
+  .dateIconWrapper{
+    flex-direction: column-reverse;
+    justify-content: unset;
+  }
+  .dateIconWrapper > div {
+    width: 100%;
+  }
+  .dateIconWrapper select {
+    width: 100%;
+  }
+  .react-datepicker__tab-loop .react-datepicker__triangle::before {
+    height: 0!important;
+  }
+  .react-datepicker__tab-loop .react-datepicker__triangle::after {
+    top: 1px!important;
+  }
+}

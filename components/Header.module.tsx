@@ -13,7 +13,7 @@ const Header: React.FC<Props> = (props) => {
         <h1>{props.title}</h1>
       </Link>
       <Link href="/profile" >
-        <p><span>Person</span>プロフィール</p>
+        <p><span className={styles.headerProfIcon}>Person</span><span className={styles.headerProfText}>プロフィール</span></p>
       </Link>
     </header>
   )
