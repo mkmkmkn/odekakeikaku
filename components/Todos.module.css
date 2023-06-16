@@ -1,5 +1,6 @@
 .mainRow {
   width: 100vw;
+  height: calc(100% - 64px);
   display: flex;
   flex-direction: row;
 }
