@@ -73,6 +73,9 @@
     height: 64px;
     flex-direction: row;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 9998;
   }
   .name{
     display: none;
