@@ -14,11 +14,14 @@
   font-family: 'Kaisei Opti', serif;
 }
 .header button {
+  appearance: none;
+  -webkit-appearance: none;
   margin-top: 32px;
   font-size: 1.5rem;
   padding: 1rem 2rem;
   border: 3px solid #666;
   border-radius: 100px;
+  color: #000;
   cursor: pointer;
   background-color: #f3edf3;
   transition: all .5s ease;
