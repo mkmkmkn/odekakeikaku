@@ -8,6 +8,7 @@ import Link from 'next/link'
 import styles from '@/styles/Plan.module.css'
 
 const Plan: NextPage = () => {
+  
     return (
       <>
       <Head>
