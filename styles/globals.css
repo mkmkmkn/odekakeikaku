@@ -162,6 +162,12 @@ a {
 
 /* レスポンシブ */
 @media screen and (max-width:600px) {
+  html, body{
+    height: 100%;
+  }
+  #__next {
+    height: calc(100% - 64px);
+  }
   .dateIconWrapper{
     flex-direction: column-reverse;
     justify-content: unset;

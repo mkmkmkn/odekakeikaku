@@ -202,12 +202,14 @@
 /* レスポンシブ */
 @media screen and (max-width:600px) {
   .mainRow{
+    height: 100%;
     flex-direction: column-reverse;
   }
   .main, .mainSp{
     width: 100%;
     height: calc(100% - 64px);
-    margin: 64px 0;
+    /* margin: 64px 0; */
+    margin: 64px 0 0;
   }
   .contents h2 {
     margin-top: 1rem;

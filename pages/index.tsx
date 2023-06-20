@@ -30,11 +30,6 @@ export default function Home() { //pages配下なのでdefaultが必要
                 </AuthPlanApp>
               </Auth.UserContextProvider>
             </li>
-            <li>
-              {/* <Link href="/plan">
-                ログイン
-              </Link> */}
-            </li>
           </ul>
         </nav>
       </header>

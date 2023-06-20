@@ -43,17 +43,121 @@
   'opsz' 48;
 }
 .avatar {
+  margin-top: 48px;
   border-radius: 50%;
+}
+.profileForm {
+  width: -webkit-fill-available;
+  max-width: 640px;
+  padding: 32px;
+  margin: 32px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-radius: 12px;
+}
+.profileForm > div:nth-child(n+2) {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.email {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.email input {
+  width: 100%;
+  padding: 0.25rem;
+  margin-top: 0.5rem;
+  border: 2px solid #666;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.fullname {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fullname input {
+  width: 100%;
+  padding: 0.25rem;
+  margin-top: 0.5rem;
+  border: 2px solid #666;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.addButton {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 2rem;
+  margin: 0 auto;
+  background-color: #fff;
+  font-size: 1.25rem;
+  border-radius: 40px;
+  border: 2px solid #666;
+  cursor: pointer;
+  transition: all .5s ease;
+  overflow: hidden;
+  position: relative;
+}
+.addButton:after {
+  content: '';
+  display: block;
+  height: 7px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+      45deg,
+      #666,
+      #666 1px,
+      transparent 2px,
+      transparent 5px
+  );
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-top: 1px solid #666;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-size: 7px 7px;
+}
+.addButton:hover {
+  background-color: #666;
+  color: #fff;
+  border-color: #000;
+}
+@keyframes stripe-slide {
+  0% { background-position: 0% 0; }
+  100% { background-position: 100% 0; }
+}
+.addButton:hover:after {
+  background-image: repeating-linear-gradient(
+      45deg,
+      #fff,
+      #fff 1px,
+      transparent 2px,
+      transparent 5px
+  );
+  border-top: 1px solid #000;
+  animation: stripe-slide 8s infinite linear forwards;
 }
 
 /* レスポンシブ */
 @media screen and (max-width:600px) {
   .mainRow{
+    height: 100%;
+    margin-top: 64px;
     flex-direction: column-reverse;
   }
   .main{
     width: 100%;
-    height: calc(100vh - 128px);
+    /* height: calc(100vh - 128px); */
+    height: 100%;
   }
   .contents h2 {
     margin-top: 1rem;
@@ -63,5 +167,14 @@
     top: -0.375rem;
     left: -21%;
     font-size: 2.25rem;
+  }
+  .avatar {
+    margin-top: 1rem;
+    width: 140px;
+    height: 140px;
+  }
+  .profileForm {
+    padding: 1.5rem;
+    margin: 1rem 2.5vw 1rem 2.5vw;
   }
 }

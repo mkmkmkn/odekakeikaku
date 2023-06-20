@@ -7,10 +7,13 @@
   align-items: center;
   background: #f0f0d8;
 }
+.avatar {
+  margin-top: 32px;
+  border-radius: 50%;
+}
 .name {
   height: 3.5rem;
   padding: 1rem;
-  margin-top: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +79,11 @@
     position: fixed;
     bottom: 0;
     z-index: 9998;
+  }
+  .avatar {
+    width: 44px;
+    height: 44px;
+    margin: 0 10px;
   }
   .name{
     display: none;

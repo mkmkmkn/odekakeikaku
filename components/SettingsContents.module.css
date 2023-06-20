@@ -46,11 +46,13 @@
 /* レスポンシブ */
 @media screen and (max-width:600px) {
   .mainRow{
+    height: 100%;
+    margin-top: 64px;
     flex-direction: column-reverse;
   }
   .main{
     width: 100%;
-    height: calc(100vh - 128px);
+    height: 100%;
   }
   .contents h2 {
     margin-top: 1rem;
