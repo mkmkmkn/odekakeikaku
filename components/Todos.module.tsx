@@ -167,7 +167,7 @@ const Todos:React.FC<Props> = (props:Props) => {
               <textarea onChange={(e) => setTask(e.target.value)} value={task} placeholder="内容"></textarea>
               <button className={styles.addButton}>追加</button>
             </form>
-            <div onClick={toggleShow} className={styles.todosFormOpenButton}>add_circle</div>
+            <div onClick={toggleShow} className={!show ? styles.todosFormOpenButton : styles.todosFormCloseButton}>add_circle</div>
           </main>
         </div>
       </>
