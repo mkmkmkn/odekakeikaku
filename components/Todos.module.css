@@ -204,7 +204,7 @@
 }
 
 /* レスポンシブ */
-@media screen and (max-width:600px) {
+@media screen and (max-width:959px) {
   .mainRow{
     height: 100%;
     flex-direction: column-reverse;

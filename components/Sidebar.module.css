@@ -64,13 +64,17 @@
   font-size: 1.125rem;
   cursor: pointer;
   transition: all .3s ease;
+  color: #000;
+}
+.logoutButton a {
+  color: #000;
 }
 .logoutButton:hover {
   background: #e0e0c8;
 }
 
 /* レスポンシブ */
-@media screen and (max-width:600px) {
+@media screen and (max-width:959px) {
   .sidebar{
     width: 100%;
     height: 64px;
@@ -107,8 +111,16 @@
     width: 64px;
     height: 64px;
     padding: 0;
+    color: #000;
+  }
+  .logoutButton a {
+    color: #000;
   }
   .logoutButtonText {
     display: none;
+    color: #000;
+  }
+  .logoutButtonText a {
+    color: #000;
   }
 }

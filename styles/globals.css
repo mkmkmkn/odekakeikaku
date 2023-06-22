@@ -161,7 +161,7 @@ a {
 }
 
 /* レスポンシブ */
-@media screen and (max-width:600px) {
+@media screen and (max-width:959px) {
   html, body{
     height: 100%;
   }
