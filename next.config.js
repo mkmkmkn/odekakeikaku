@@ -8,6 +8,9 @@ const nextConfig = {
   images: {
     domains: ['localhost', 'lh3.googleusercontent.com'],
   },
+  experimental: {
+    optimizeFonts: true,
+  },
 }
 
 // PWA用　ここから
