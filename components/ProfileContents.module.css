@@ -105,6 +105,10 @@
   transition: all .5s ease;
   overflow: hidden;
   position: relative;
+  color: #000;
+}
+.addButton a {
+  color: #000;
 }
 .addButton:after {
   content: '';

@@ -124,6 +124,7 @@
   border: 2px solid #666;
   border-radius: 5px;
   font-size: 1rem;
+  color: #000;
 }
 .todosForm select::after,
 .todosFormSp select::after {
@@ -155,6 +156,10 @@
   transition: all .5s ease;
   overflow: hidden;
   position: relative;
+  color: #000;
+}
+.addButton a {
+  color: #000;
 }
 .addButton:after {
   content: '';
