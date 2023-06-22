@@ -10,4 +10,16 @@ const nextConfig = {
   },
 }
 
+// PWA用　ここから
+const withPWA = require('next-pwa')
+
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',
+    register: true,
+    skipWaiting: true,
+  },
+})
+// PWA用　ここまで
+
 module.exports = nextConfig
