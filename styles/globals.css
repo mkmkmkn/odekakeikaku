@@ -185,7 +185,7 @@ a {
   .react-datepicker__tab-loop {
     width: 100%;
     position: fixed;
-    top: -9vh;
+    top: -6vh;
     /* left: 0; */
     left: 50%;
     transform: translateX( -50%);
