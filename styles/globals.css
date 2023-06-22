@@ -178,10 +178,30 @@ a {
   .dateIconWrapper select {
     width: 100%;
   }
+  .react-datepicker {
+    left: 50%;
+    transform: translateX( -50%);
+  }
+  .react-datepicker__tab-loop {
+    width: 100%;
+    position: fixed;
+    top: -9vh;
+    /* left: 0; */
+    left: 50%;
+    transform: translateX( -50%);
+    z-index: 1;
+  }
+  .react-datepicker-popper {
+    position: unset!important;
+    inset: 0!important;
+    transform: none!important;
+  }
   .react-datepicker__tab-loop .react-datepicker__triangle::before {
     height: 0!important;
+    display: none;
   }
   .react-datepicker__tab-loop .react-datepicker__triangle::after {
     top: 1px!important;
+    display: none;
   }
 }
