@@ -16,7 +16,8 @@ type Props = {
 const ProfileContents: React.FC<Props> = (props: Props) => {
   const { user } = Auth.useUser();
 
-  const supabase = createClientComponentClient()
+  // const supabase = createClientComponentClient()
+  
   // publicなバケットに画像が保存されている場合
   // const { data } = supabaseClient.storage.from('avatars').getPublicUrl("DSC02815.JPG")
   // const imageUrl = data.publicUrl
@@ -32,7 +33,7 @@ const ProfileContents: React.FC<Props> = (props: Props) => {
     try {
       setLoading(true)
 
-      let { data, error, status } = await supabase
+      let { data, error, status } = await supabaseClient
         .from('profiles')
         .select(`full_name, username, website, avatar_url`)
         .eq('id', user?.id)
@@ -54,7 +55,7 @@ const ProfileContents: React.FC<Props> = (props: Props) => {
     } finally {
       setLoading(false)
     }
-  }, [user, supabase])
+  }, [user, supabaseClient])
 
   useEffect(() => {
     getProfile()
@@ -63,7 +64,7 @@ const ProfileContents: React.FC<Props> = (props: Props) => {
   useEffect(() => {
     async function downloadImage(path: string) {
       try {
-        const { data, error } = await supabase.storage.from('avatars').download(path)
+        const { data, error } = await supabaseClient.storage.from('avatars').download(path)
         if (error) {
           throw error
         }
@@ -76,7 +77,7 @@ const ProfileContents: React.FC<Props> = (props: Props) => {
     }
 
     if (avatar_url) downloadImage(avatar_url)
-  }, [avatar_url, supabase])
+  }, [avatar_url, supabaseClient])
 
   // プロフィール画像更新
   async function updateProfile({
@@ -92,7 +93,7 @@ const ProfileContents: React.FC<Props> = (props: Props) => {
     try {
       setLoading(true)
 
-      let { error } = await supabase.from('profiles').upsert({
+      let { error } = await supabaseClient.from('profiles').upsert({
         id: user?.id as string,
         full_name: fullname,
         username,
