@@ -15,7 +15,7 @@
 
 # 使用技術 / ツール
 
-HTML / CSS / Sass / JavaScript / TypeScript / React / Next.js / Supabase / Vercel / SPA<br><br>
+HTML / CSS / Sass / JavaScript / TypeScript / React / Next.js / Supabase / Vercel / PWA<br><br>
 [![My Skills](https://skillicons.dev/icons?i=html,css,sass,js,ts,react,next,supabase,vercel)](https://skillicons.dev)
 
 
